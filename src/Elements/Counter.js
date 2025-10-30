@@ -8,17 +8,12 @@ class Counter extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ["start", "end"];
+        return ["start"];
     };
 
     attributechangedCallback(name, oldValue, newValue) {
 
-        if (name === "start") {
-            this.startTime = new Date(newValue).getTime();
-        } else if (name === "end") {
-            this.endTime = new Date(newValue).getTime();
-        }
-
+        console.log(name)
     }
 
     connectedCallback() {
@@ -27,18 +22,20 @@ class Counter extends HTMLElement {
 
     render() {
 
-        this.innerHTML = `<h1 id="countdown">&nbsp;</h1>
-                          <h3>until our next event</h3>`
+        this.innerHTML = `<div class="mainPoint">
+        <h1 id="countdown">&nbsp;</h1>
+        <h3>until our next event</h3>
+        </div>`
                           
-                          setInterval(() => {
-                            const now = new Date().getTime()
-                            const distance = this.endTime - now
-                            const time = [Math.floor(distance / (1000 * 60 * 60 * 24)),
-                                Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-                                Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-                                 Math.floor((distance % (1000 * 60)) / 1000)]
-                                 this.querySelector("#countdown").innerHTML = `<b>${time[0]}:${time[1]}:${time[2]}:${time[3]}</b>`
-                                 }, 1000);
+        setInterval(() => {
+        const now = new Date().getTime()
+        const distance = this.endTime - now
+        const time = [Math.floor(distance / (1000 * 60 * 60 * 24)),
+            Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+            Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+            Math.floor((distance % (1000 * 60)) / 1000)]
+            this.querySelector('#countdown').innerHTML = `${this.endTime}`;
+        }, 1000);
     }
 
 }
