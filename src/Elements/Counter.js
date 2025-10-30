@@ -5,10 +5,14 @@ class Counter extends HTMLElement {
 
     constructor() {
         super();
+
+
+        this.startTime = new Date( this.getAttribute("start")).getTime()
+        this.endTime = new Date( this.getAttribute("end")).getTime()
     }
 
     static get observedAttributes() {
-        return ["start"];
+        return ["start", "end"];
     };
 
     attributechangedCallback(name, oldValue, newValue) {
@@ -29,12 +33,21 @@ class Counter extends HTMLElement {
                           
         setInterval(() => {
         const now = new Date().getTime()
-        const distance = this.endTime - now
+
+        const distanceStart = this.startTime - now
+        const distanceEnd = this.endTime - now
+
+        const beforeEvent = distanceStart > 0
+
+        const distance = beforeEvent ? distanceStart : distanceEnd
+
+        console.log(beforeEvent)
+
         const time = [Math.floor(distance / (1000 * 60 * 60 * 24)),
             Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
             Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
             Math.floor((distance % (1000 * 60)) / 1000)]
-            this.querySelector('#countdown').innerHTML = `${this.endTime}`;
+            this.querySelector('#countdown').innerHTML = `<b>${time[0]} Days, ${time[1]} Hours, ${time[2]} Minutes, ${time[3]} Seconds</b>`;
         }, 1000);
     }
 
