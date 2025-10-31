@@ -28,7 +28,7 @@ class Counter extends HTMLElement {
 
         this.innerHTML = `<div class="mainPoint">
         <h1 id="countdown">&nbsp;</h1>
-        <h3>until our next event</h3>
+        <h3 id="label"></h3>
         </div>`
                           
         setInterval(() => {
@@ -48,6 +48,7 @@ class Counter extends HTMLElement {
             Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
             Math.floor((distance % (1000 * 60)) / 1000)]
             this.querySelector('#countdown').innerHTML = `<b>${time[0]} Days, ${time[1]} Hours, ${time[2]} Minutes, ${time[3]} Seconds</b>`;
+            this.querySelector('#label').innerHTML = beforeEvent ? "Until Our Next Event" : "Until Event Ends"
         }, 1000);
     }
 
