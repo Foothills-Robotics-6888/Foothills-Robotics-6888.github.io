@@ -1,16 +1,19 @@
 /*========================header=============================================*/
 header {
-    display: inline;
-    background-color: yellow;
+  display: inline;
+  background-color: yellow;
 }
 
 /*========================common tools=======================================*/
 .mainPoint {
-    border: 5px solid dodgerblue;
-    border-radius: 10px;
-    text-align: center;
-    margin-right: 20%;
-    margin-left: 20%;
+  border: 5px solid dodgerblue;
+  border-radius: 10px;
+  text-align: center;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+.headerLink {
+  margin: 10%;
 }
 
 /*===========================overall=======================================*/
@@ -35,5 +38,5 @@ header {
   border-radius: 10px;
 }
 body {
-    background-color: lightyellow;
+  background-color: lightyellow;
 }
