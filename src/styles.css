@@ -2,6 +2,15 @@
 header {
     display: inline;
     background-color: yellow;
+
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+      background-color: #CCCC00;
+      border-radius: 10px;
+    }
 }
 
 /*========================common tools=======================================*/
@@ -30,10 +39,12 @@ header {
   background: yellow;
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #CCCC00;
   border-radius: 10px;
 }
+
 body {
-    background-color: lightyellow;
+  background-color: lightyellow;
 }
