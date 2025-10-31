@@ -7,36 +7,8 @@
     <header><a>Home</a><a>Blog</a><a>About</a><a>Contact</a></header>
     <main>
 
-        
-
-        <test-counter start="October 30, 2025 12:00:00", end="October 31, 2025 12:00:00"></test-counter>
-        
+        <test-counter start="October 31, 2025 12:00:00", end="October 31, 2026 12:00:00"></test-counter>
         <script src="Elements/Counter.js"></script>
-
-        <!--
-        <div class="mainPoint">
-            <h1 id="countdown">&nbsp;</h1>
-            <h3>until our next event</h3>
-        </div>
-        <script>
-            let countdownDate = [new Date("March 13, 2026 17:00:00").getTime(), new Date("March 20, 2026 17:00:00").getTime()];
-            let distance = null
-            let x = setInterval(function() {
-                for(date of countdownDate) {
-                    var now = new Date().getTime();
-                    distance = date - now;
-                    if (distance >= 0) {
-                        break;};
-                    distance = new Date().getTime();
-                }
-                time = [Math.floor(distance / (1000 * 60 * 60 * 24)),
-                Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-                Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-                Math.floor((distance % (1000 * 60)) / 1000)];
-                document.getElementById("countdown").innerHTML = `<b>${time[0]}:${time[1]}:${time[2]}:${time[3]}</b>`;
-                
-            }, 1000);
-        </script>
-        -->
+        
     </main>
 </body>
