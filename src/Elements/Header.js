@@ -10,10 +10,10 @@ class WebHeader extends HTMLElement {
 
     static nav = `<nav>
         <a href="index.html">Home</a>
-        <a href="pages/about.html">About</a>
-        <a href="pages/blog.html">Blog</a>
-        <a href="pages/contact.html">Contact</a>
-        <a href="pages/events.html">Events</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="events.html">Events</a>
     </nav>`;
 
     render() {
