@@ -41,8 +41,6 @@ class Counter extends HTMLElement {
 
         const distance = beforeEvent ? distanceStart : distanceEnd
 
-        console.log(beforeEvent)
-
         const time = [Math.floor(distance / (1000 * 60 * 60 * 24)),
             Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
             Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
