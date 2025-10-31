@@ -22,6 +22,7 @@ class Counter extends HTMLElement {
 
     connectedCallback() {
         this.render();
+        this.setCounter();
     }
 
     render() {
@@ -32,6 +33,11 @@ class Counter extends HTMLElement {
         </div>`
                           
         setInterval(() => {
+            this.setCounter();
+        }, 1000);
+    }
+
+    setCounter() {
         const now = new Date().getTime()
 
         const distanceStart = this.startTime - now
@@ -45,9 +51,9 @@ class Counter extends HTMLElement {
             Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
             Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
             Math.floor((distance % (1000 * 60)) / 1000)]
-            this.querySelector('#countdown').innerHTML = `<b>${time[0]} Days, ${time[1]} Hours, ${time[2]} Minutes, ${time[3]} Seconds</b>`;
-            this.querySelector('#label').innerHTML = beforeEvent ? "Until Our Next Event" : "Until Event Ends"
-        }, 1000);
+            
+        this.querySelector('#countdown').innerHTML = `<b>${time[0]} Days, ${time[1]} Hours, ${time[2]} Minutes, ${time[3]} Seconds</b>`;
+        this.querySelector('#label').innerHTML = beforeEvent ? "Until Our Next Event" : "Until Event Ends"
     }
 
 }
