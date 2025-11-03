@@ -1,4 +1,4 @@
-class WebHeader extends HTMLElement {
+/*class WebHeader extends HTMLElement {
 
     constructor() {
         super();
@@ -23,4 +23,13 @@ class WebHeader extends HTMLElement {
     }
 }
 
-customElements.define('web-header', WebHeader, { extends: "header" });
+customElements.define('web-header', WebHeader, { extends: "header" });*/
+let header = document.createElement("header");
+header.innerHTML = `<nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="events.html">Events</a>
+    </nav>`;
+document.body.insertBefore(header, document.getElementById("main"))
