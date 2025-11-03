@@ -46,5 +46,15 @@ header {
 }
 
 body {
-  background-color: lightyellow;
+  background-color: yellow;
+
+  .content {
+    background-color: lightyellow;
+    justify-self: center;
+
+    margin-top: 50px;
+
+    width: 80%;
+    height: 100c;
+  }
 }

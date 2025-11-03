@@ -29,7 +29,7 @@ class Counter extends HTMLElement {
 
         this.innerHTML = `<div class="mainPoint">
         <h1 id="countdown">&nbsp;</h1>
-        <h3> <a id="label" href="pages/events.html"></a> </h3>
+        <h3> <a id="label" href="events.html"></a> </h3>
         </div>`
                           
         setInterval(() => {
@@ -58,4 +58,4 @@ class Counter extends HTMLElement {
 
 }
 
-customElements.define('test-counter', Counter);
+customElements.define('event-counter', Counter);
