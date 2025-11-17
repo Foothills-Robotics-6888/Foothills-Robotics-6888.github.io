@@ -32,4 +32,5 @@ header.innerHTML = `<nav>
         <a href="contact.html">Contact</a>
         <a href="events.html">Events</a>
     </nav>`;
+header.id = "headpic";
 document.body.insertBefore(header, document.getElementById("main"))

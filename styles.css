@@ -18,6 +18,7 @@ header {
       text-decoration: underline;
       background-color: #CCCC00;
       border-radius: 10px;
+      padding: 10px;
     }
 }
 
@@ -30,7 +31,13 @@ header {
     margin-left: 20%;
     margin-top: 40px;
 }
-
+.glassMorph {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
 /*===========================overall=======================================*/
 /* width */
 ::-webkit-scrollbar {
@@ -57,4 +64,8 @@ header {
 body {
   background-color: lightyellow;
   font-family: 'Abel'; font-size: 22px;
+}
+/*===========================Specifics======================================*/
+#headpic {
+  background-image: "images/HeaderImage.jpeg";
 }
