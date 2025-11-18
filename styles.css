@@ -1,24 +1,38 @@
 /*========================header=============================================*/
 header {
     display: inline-block;
-    background-color: yellow;
     text-align: center;
     width: 100%;
-    height: 1.5em;
     position: absolute;
     top: 0;
     left: 0;
+    height: 4em;
     border-bottom: 3px dotted dodgerblue;
+    background-image: url(images/HeaderImage.jpeg);
+    background-position: center;
+    background-size:cover;
+    background-color: rgba(255, 255, 255, 0.5);
     a {
       text-decoration: none;
       margin-left: 5%;
       margin-right:5%;
+      color: white;
+      size: 2em;
+    }
+    #darkshade {
+      background-color: rgba(128, 128, 128, 0.625);
+      height: 2em;
+      padding: 1em;
+
     }
     a:hover {
       text-decoration: underline;
-      background-color: #CCCC00;
-      border-radius: 10px;
-      padding: 10px;
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      background-color: rgba(17, 25, 40, 0.75);
+      border-radius: 12px;
+      border: 2px solid rgba(255, 255, 255, 0.125);
+      padding: 1em;
     }
 }
 
@@ -29,14 +43,15 @@ header {
     text-align: center;
     margin-right: 20%;
     margin-left: 20%;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 .glassMorph {
   backdrop-filter: blur(16px) saturate(180%);
+  padding: 0.5em;
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
+  background-color: rgba(17, 25, 40, 0.5);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  border: 2px solid rgba(255, 255, 255, 0.125);
 }
 /*===========================overall=======================================*/
 /* width */
@@ -66,6 +81,3 @@ body {
   font-family: 'Abel'; font-size: 22px;
 }
 /*===========================Specifics======================================*/
-#headpic {
-  background-image: "images/HeaderImage.jpeg";
-}
