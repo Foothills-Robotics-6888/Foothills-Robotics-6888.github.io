@@ -7,7 +7,7 @@ header {
     top: 0;
     left: 0;
     height: 4em;
-    border-bottom: 3px dotted dodgerblue;
+    border-bottom: 3px dotted yellow;
     background-image: url(images/HeaderImage.jpeg);
     background-position: center;
     background-size:cover;
@@ -18,12 +18,13 @@ header {
       margin-right:5%;
       color: white;
       size: 2em;
+      padding: 0em;
+      transition: padding 0.5s, color 0.5s;
     }
     #darkshade {
       background-color: rgba(128, 128, 128, 0.625);
       height: 2em;
       padding: 1em;
-
     }
     a:hover {
       text-decoration: underline;
@@ -32,13 +33,14 @@ header {
       background-color: rgba(17, 25, 40, 0.75);
       border-radius: 12px;
       border: 2px solid rgba(255, 255, 255, 0.125);
-      padding: 1em;
+      padding: 0.5em;
+      color: white;
     }
 }
 
 /*========================common tools=======================================*/
 .mainPoint {
-    border: 5px solid dodgerblue;
+    border: 5px solid yellow;
     border-radius: 10px;
     text-align: center;
     margin-right: 20%;
@@ -52,6 +54,43 @@ header {
   background-color: rgba(17, 25, 40, 0.5);
   border-radius: 12px;
   border: 2px solid rgba(255, 255, 255, 0.125);
+}
+/*=========================imageCarousel===================================*/
+
+.carousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vw;
+  transform: rotateX(-20deg) translateY(-70px);
+  transform-style: preserve-3d;
+  perspective: 100vw;
+  user-select: none;
+  cursor: grab;
+}
+
+.carousel-image {
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -100px;
+  width: 21.36vw;
+  height: 28.48vw;
+  transform: translate3d(0, 0, -10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  transform-origin: 50% 50%;
+  background-repeat: round;
+}
+
+@media (max-width: 600px) {
+  .carousel {
+    transform: rotateX(-10deg) scale(.6) translateY(-60px);
+  }
 }
 /*===========================overall=======================================*/
 /* width */
@@ -67,17 +106,29 @@ header {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: yellow;
+  background: dodgerblue;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #CCCC00;
+  background: dodgerblue;
   border-radius: 10px;
 }
 
 body {
-  background-color: lightyellow;
+  background-color: #555580;
   font-family: 'Abel'; font-size: 22px;
+  a {
+    color: dodgerblue;
+    transition: padding 0.5s, color 0.5s, font-size 0.5s;
+  }
+  a:hover {
+    color: white;
+    font-size: 1.5em;
+  }
+}
+
+img {
+  object-fit:contain;
 }
 /*===========================Specifics======================================*/
