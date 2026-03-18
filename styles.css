@@ -76,8 +76,8 @@ header {
   top: 50%;
   left: 50%;
   margin: -100px 0 0 -100px;
-  width: 21.36vw;
-  height: 28.48vw;
+  width: 30vw;
+  height: 40vw;
   transform: translate3d(0, 0, -10px);
   display: flex;
   justify-content: center;
@@ -85,6 +85,8 @@ header {
   color: #fff;
   transform-origin: 50% 50%;
   background-repeat: round;
+  border-radius: 10px;
+  border: 5px solid yellow;
 }
 
 @media (max-width: 600px) {
@@ -117,6 +119,7 @@ header {
 
 body {
   background-color: black;
+  color: white;
   font-family: 'Abel'; font-size: 22px;
   a {
     color: dodgerblue;

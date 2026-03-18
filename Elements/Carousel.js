@@ -1,9 +1,30 @@
-const images = document.querySelectorAll('.carousel-image')
+const images = document.getElementsByClassName('carousel-image')
 const imageLinks = [`url(images/Homepage.jpg)`,"url(images/20251019_163431.jpg)", 
     "url(images/20251019_155957.jpg)", "url(images/20251019_085415.jpg)", 
     "url(images/20251019_085410.jpg)","url(images/20251019_113216.JPG)", 
     "url(images/20251019_163644.JPG)", "url(images/IMG_9674.JPG)"]
-const radius = window.screen.width/4
+
+/*testing*/
+gsap.registerPlugin('ScrollTrigger')
+console.log("Loading...")
+for(i=0; i<images.length;i++){
+  console.log("Loading...")
+  images[i].classList.add(`img${i}`)
+  images[i].style.top = `${400+(60*i)}px`;
+  images[i].style.right = `${500+(60*i)}px`
+  gsap.from(`.img${i}`,{
+    scrollTrigger:{
+      toggle: images[i],
+      markers: true,
+      toggleActions: "restart pause reverse reverse",
+      trigger: `.img${i}`,
+      start: `${10} ${640-80*i}`},
+   x:-1000, duration:1})
+  images[i].style.backgroundImage = imageLinks[i]
+  console.log(images[i])
+}
+
+/*const radius = window.screen.width/4
 const progress = {
   value: 0
 }
@@ -85,5 +106,5 @@ const animate = () => {
   })
 }
 gsap.ticker.add(animate)
-carousel.addEventListener("mouseenter", disableScroll);
-carousel.addEventListener("mouseleave", enableScroll)
+//carousel.addEventListener("mouseenter", disableScroll);
+//carousel.addEventListener("mouseleave", enableScroll)*/
